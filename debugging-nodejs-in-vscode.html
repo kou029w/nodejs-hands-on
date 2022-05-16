@@ -3,8 +3,7 @@
     <head>
         <!-- Book generated using mdBook -->
         <meta charset="UTF-8">
-        <title>Page not found - Node.jsを使う</title>
-        <base href="/nodejs-hands-on/">
+        <title>VSCodeでのNode.jsのデバッグ - Node.jsを使う</title>
         <!-- Custom HTML head -->
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
         <meta name="description" content="">
@@ -76,7 +75,7 @@
 
         <nav id="sidebar" class="sidebar" aria-label="Table of contents">
             <div class="sidebar-scrollbox">
-                <ol class="chapter"><li class="chapter-item expanded "><a href="index.html"><strong aria-hidden="true">1.</strong> Node.jsを使う</a></li><li class="chapter-item expanded "><a href="about-nodejs.html"><strong aria-hidden="true">2.</strong> Node.jsとは</a></li><li class="chapter-item expanded "><a href="installing-nodejs.html"><strong aria-hidden="true">3.</strong> Node.jsのインストール</a></li><li class="chapter-item expanded "><a href="package-json.html"><strong aria-hidden="true">4.</strong> package.jsonファイル</a></li><li class="chapter-item expanded "><a href="eslint.html"><strong aria-hidden="true">5.</strong> ESLintの導入</a></li><li class="chapter-item expanded "><a href="prettier.html"><strong aria-hidden="true">6.</strong> Prettierの導入</a></li><li class="chapter-item expanded "><a href="installing-vscode.html"><strong aria-hidden="true">7.</strong> VSCodeのインストール</a></li><li class="chapter-item expanded "><a href="vscode-extensions.html"><strong aria-hidden="true">8.</strong> VSCodeの拡張機能</a></li><li class="chapter-item expanded "><a href="debugging-nodejs-in-vscode.html"><strong aria-hidden="true">9.</strong> VSCodeでのNode.jsのデバッグ</a></li></ol>
+                <ol class="chapter"><li class="chapter-item expanded "><a href="index.html"><strong aria-hidden="true">1.</strong> Node.jsを使う</a></li><li class="chapter-item expanded "><a href="about-nodejs.html"><strong aria-hidden="true">2.</strong> Node.jsとは</a></li><li class="chapter-item expanded "><a href="installing-nodejs.html"><strong aria-hidden="true">3.</strong> Node.jsのインストール</a></li><li class="chapter-item expanded "><a href="package-json.html"><strong aria-hidden="true">4.</strong> package.jsonファイル</a></li><li class="chapter-item expanded "><a href="eslint.html"><strong aria-hidden="true">5.</strong> ESLintの導入</a></li><li class="chapter-item expanded "><a href="prettier.html"><strong aria-hidden="true">6.</strong> Prettierの導入</a></li><li class="chapter-item expanded "><a href="installing-vscode.html"><strong aria-hidden="true">7.</strong> VSCodeのインストール</a></li><li class="chapter-item expanded "><a href="vscode-extensions.html"><strong aria-hidden="true">8.</strong> VSCodeの拡張機能</a></li><li class="chapter-item expanded "><a href="debugging-nodejs-in-vscode.html" class="active"><strong aria-hidden="true">9.</strong> VSCodeでのNode.jsのデバッグ</a></li></ol>
             </div>
             <div id="sidebar-resize-handle" class="sidebar-resize-handle"></div>
         </nav>
@@ -114,6 +113,9 @@
                         <a href="https://github.com/kou029w/nodejs-hands-on" title="Git repository" aria-label="Git repository">
                             <i id="git-repository-button" class="fa fa-github"></i>
                         </a>
+                        <a href="https://github.com/kou029w/nodejs-hands-on/edit/main/src/debugging-nodejs-in-vscode.md" title="Suggest an edit" aria-label="Suggest an edit">
+                            <i id="git-edit-button" class="fa fa-edit"></i>
+                        </a>
                     </div>
                 </div>
 
@@ -138,19 +140,38 @@
 
                 <div id="content" class="content">
                     <main>
-                        <h1 id="document-not-found-404"><a class="header" href="#document-not-found-404">Document not found (404)</a></h1>
-<p>This URL is invalid, sorry. Please use the navigation bar or search to continue.</p>
+                        <h1 id="vscodeでのnodejsのデバッグ"><a class="header" href="#vscodeでのnodejsのデバッグ">VSCodeでのNode.jsのデバッグ</a></h1>
+<p>VSCodeは標準でNode.jsのプログラムのデバッグを行うことができます。</p>
+<p>VSCodeでNode.jsのプログラムのデバッグを行うには、Auto Attach (自動アタッチ)を使用します。
+設定を変更し、Node.jsで起動したプログラムにアタッチして、デバッグを開始します。</p>
+<p>デバッグを行えるようにすることで、ブレークポイントを指定して処理の流れを確認したり、そのときの変数の内容を確認したりすることができます。</p>
+<h2 id="自動アタッチ設定"><a class="header" href="#自動アタッチ設定">自動アタッチ設定</a></h2>
+<p>設定から、Debug › JavaScript: Auto Attach Filter (<code>debug.javascript.autoAttachFilter</code>) を変更します。</p>
+<p><code>smart</code> を選択すると、VSCodeターミナルからNode.jsのプロセスを実行したとき<a href="https://nodejs.org/ja/docs/guides/debugging-getting-started/"><code>--inspect</code></a>スイッチが有効化され、自動的にデバッグを開始することができます。</p>
+<p>自動アタッチを行うにはVSCode内のターミナルを使用しなければなりません。
+また、Auto Attachを有効にした後、ターミナルを一度再起動する必要があります。これは、ターミナルの右上にある ⚠ アイコンをクリックするか、新しいターミナルを作成することで行えます。</p>
+<h2 id="ブレークポイント"><a class="header" href="#ブレークポイント">ブレークポイント</a></h2>
+<p>Node.jsで実行するプログラムのコードをVSCodeで開き、行番号の左の部分をクリックしてブレークポイントを作成できます。
+また、もう一度その部分をクリックすることでそのブレークポイントを削除できます。</p>
+<p>ブレークポイントを作成すると、VSCode内のターミナルからNode.jsでそのプログラムを実行するとき、そのブレークポイントの行で処理は一時停止します。</p>
+<p>このようにして、VSCodeでNode.jsのプログラムのデバッグを行うことができます。</p>
 
                     </main>
 
                     <nav class="nav-wrapper" aria-label="Page navigation">
                         <!-- Mobile navigation buttons -->
+                            <a rel="prev" href="vscode-extensions.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                                <i class="fa fa-angle-left"></i>
+                            </a>
                         <div style="clear: both"></div>
                     </nav>
                 </div>
             </div>
 
             <nav class="nav-wide-wrapper" aria-label="Page navigation">
+                    <a rel="prev" href="vscode-extensions.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                        <i class="fa fa-angle-left"></i>
+                    </a>
             </nav>
 
         </div>

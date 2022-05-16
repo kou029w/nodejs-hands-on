@@ -76,7 +76,7 @@
 
         <nav id="sidebar" class="sidebar" aria-label="Table of contents">
             <div class="sidebar-scrollbox">
-                <ol class="chapter"><li class="chapter-item expanded "><a href="index.html"><strong aria-hidden="true">1.</strong> Node.jsを使う</a></li></ol>
+                <ol class="chapter"><li class="chapter-item expanded "><a href="index.html"><strong aria-hidden="true">1.</strong> Node.jsを使う</a></li><li class="chapter-item expanded "><a href="about-nodejs.html"><strong aria-hidden="true">2.</strong> Node.jsとは</a></li><li class="chapter-item expanded "><a href="installing-nodejs.html"><strong aria-hidden="true">3.</strong> Node.jsのインストール</a></li><li class="chapter-item expanded "><a href="package-json.html"><strong aria-hidden="true">4.</strong> package.jsonファイル</a></li><li class="chapter-item expanded "><a href="eslint.html"><strong aria-hidden="true">5.</strong> ESLintの導入</a></li><li class="chapter-item expanded "><a href="prettier.html"><strong aria-hidden="true">6.</strong> Prettierの導入</a></li><li class="chapter-item expanded "><a href="installing-vscode.html"><strong aria-hidden="true">7.</strong> VSCodeのインストール</a></li><li class="chapter-item expanded "><a href="vscode-extensions.html"><strong aria-hidden="true">8.</strong> VSCodeの拡張機能</a></li><li class="chapter-item expanded "><a href="debugging-nodejs-in-vscode.html"><strong aria-hidden="true">9.</strong> VSCodeでのNode.jsのデバッグ</a></li></ol>
             </div>
             <div id="sidebar-resize-handle" class="sidebar-resize-handle"></div>
         </nav>
@@ -139,6 +139,267 @@
                 <div id="content" class="content">
                     <main>
                         <h1 id="nodejsを使う"><a class="header" href="#nodejsを使う">Node.jsを使う</a></h1>
+<p>この文書はNode.jsを使うための入門ガイドです。Node.jsを使って開発を進めていくための最初の一歩になればと思います。</p>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="nodejsとは"><a class="header" href="#nodejsとは">Node.jsとは</a></h1>
+<p>公式サイト: <a href="https://nodejs.org/ja/">Node.js</a></p>
+<p>Node.jsは、オープンソースでクロスプラットフォームなJavaScript実行環境です。Webアプリケーションを中心に幅広い開発に使われています。</p>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="nodejsのインストール"><a class="header" href="#nodejsのインストール">Node.jsのインストール</a></h1>
+<p>Node.jsはさまざまな方法でインストールできます。最も一般的な方法は、公式サイトからダウンロードしてインストールする方法です。</p>
+<p>主要なプラットフォームのインストーラーは、<a href="https://nodejs.org/ja/download/">Node.jsの公式サイト - https://nodejs.org/ja/download/</a> からダウンロードできます。
+こちらから自分の環境に合わせたインストーラーをダウンロードし、それを実行します。
+インストーラーを実行するとNode.jsがインストールされます。</p>
+<h2 id="ヒント-ltsと最新版"><a class="header" href="#ヒント-ltsと最新版">ヒント: 「LTS」と「最新版」</a></h2>
+<p>バージョンの説明を読むと「LTS (推奨版)」とあります。この「LTS」は何かというと、「Long Term Support」を表しており、「長期間安定的にサポートされます」という意味です。</p>
+<p>現在、Node.jsは毎年LTSリリースを行っています。このLTSリリースは、バージョン番号が偶数番号 (たとえば、16、18など) のものが採用されます。LTSリリースのバージョンは、重要なバグ修正を基本的に30ヶ月間が行われることを保証されています。</p>
+<p>一方、それらのLTSリリースとは別に、Node.jsは6ヶ月ごとに最新版がリリースされます。この最新版はLTSリリースとは異なり、次のバージョンのリリース後にサポートされなくなります。したがって、一般的にはLTSリリースを採用するのがよいでしょう。</p>
+<p>参照: <a href="https://nodejs.org/ja/about/releases/">リリース | Node.js</a></p>
+<h2 id="ターミナルの使用"><a class="header" href="#ターミナルの使用">ターミナルの使用</a></h2>
+<p>コマンドを実行するにはターミナルを使用します。</p>
+<p>macOS の場合:</p>
+<p>[アプリケーション] &gt; [ユーティリティ] 内にある [ターミナル] を選択して起動します。</p>
+<p>Windows の場合:</p>
+<p>Microsoft Storeから、Windows Terminalをインストールします。
+インストール後、[スタートメニュー] &gt; [Windows Terminal] を選択して起動します。</p>
+<h2 id="nodejsの使用"><a class="header" href="#nodejsの使用">Node.jsの使用</a></h2>
+<p>ターミナルで次のコマンドを実行して、Node.jsがインストールされていることを確認します。</p>
+<pre><code class="language-bash">node -v
+</code></pre>
+<p>インストールしたNode.jsのバージョンが表示されていれば、Node.jsを使用する準備は完了です。</p>
+<pre><code class="language-console">$ node -v
+v16.15.0
+</code></pre>
+<h2 id="npmとプロキシの確認"><a class="header" href="#npmとプロキシの確認">NPMとプロキシの確認</a></h2>
+<p>プロキシが存在する環境では、ターミナルで <code>npm</code> コマンドを実行した際、次のようなエラーメッセージとともに失敗することがあります。</p>
+<pre><code class="language-console">$ npm install --save-dev jest
+npm ERR! code ENOTFOUND
+npm ERR! syscall getaddrinfo
+npm ERR! errno ENOTFOUND
+npm ERR! network request to https://registry.npmjs.org/jest failed, reason: getaddrinfo ENOTFOUND proxy.example.com
+npm ERR! network This is a problem related to network connectivity.
+npm ERR! network In most cases you are behind a proxy or have bad network settings.
+npm ERR! network
+npm ERR! network If you are behind a proxy, please make sure that the
+npm ERR! network 'proxy' config is set properly.  See: 'npm help config'
+
+npm ERR! A complete log of this run can be found in:
+npm ERR!     /home/webdino/.npm/_logs/2022-01-12T07_20_33_146Z-debug-0.log
+</code></pre>
+<p>このようなエラーが出ない場合は設定不要です。もしこのようなエラーが出る場合は、必要に応じて環境変数 <code>HTTP_PROXY</code> と <code>HTTPS_PROXY</code> に適切なプロキシのURLを設定します。</p>
+<h2 id="npmのプロキシの設定"><a class="header" href="#npmのプロキシの設定">NPMのプロキシの設定</a></h2>
+<p>実際の自分の環境に合わせて変更してください。下記ではプロキシーのURLの例として <code>http://user:pass@proxy.example.com:8080</code> を使用しますが、実際には適切なURLを設定してください。</p>
+<h3 id="windows---コマンドプロンプトの場合"><a class="header" href="#windows---コマンドプロンプトの場合">Windows - コマンドプロンプトの場合</a></h3>
+<pre><code>set HTTP_PROXY=http://user:pass@proxy.example.com:8080
+set HTTPS_PROXY=http://user:pass@proxy.example.com:8080
+</code></pre>
+<h3 id="windows---powershellの場合"><a class="header" href="#windows---powershellの場合">Windows - PowerShellの場合</a></h3>
+<pre><code class="language-powershell">$env:HTTP_PROXY=&quot;http://user:pass@proxy.example.com:8080&quot;
+$env:HTTPS_PROXY=&quot;http://user:pass@proxy.example.com:8080&quot;
+</code></pre>
+<h3 id="それ以外---bashやzshなどの場合"><a class="header" href="#それ以外---bashやzshなどの場合">それ以外 - BashやZshなどの場合</a></h3>
+<pre><code class="language-bash">export HTTP_PROXY=http://user:pass@proxy.example.com:8080
+export HTTPS_PROXY=http://user:pass@proxy.example.com:8080
+</code></pre>
+<p>設定を行ったら、通常通り <code>npm</code> コマンドを実行して、エラーが出ないことを確認してみましょう。</p>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="packagejsonファイル"><a class="header" href="#packagejsonファイル">package.jsonファイル</a></h1>
+<p>Node.jsを使ったプロジェクトは、基本的に <code>package.json</code> というファイルが配置されます。
+<code>package.json</code> には、次のようなプロジェクトに必要な付帯情報が含まれます。</p>
+<ul>
+<li>名前とバージョン</li>
+<li>外部モジュールや依存関係</li>
+<li>テストやビルドするためのコマンドなど</li>
+</ul>
+<h2 id="プロジェクトの作成"><a class="header" href="#プロジェクトの作成">プロジェクトの作成</a></h2>
+<p>Node.jsを使った開発をはじめるにあたって、最初にプロジェクトのためのディレクトリを作成します。</p>
+<pre><code class="language-bash">mkdir my-project
+cd my-project
+</code></pre>
+<p>そして、その中に <code>package.json</code> を配置します。</p>
+<pre><code class="language-bash">npm init -y
+</code></pre>
+<p>これで一通りの準備が整いました。</p>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="eslintの導入"><a class="header" href="#eslintの導入">ESLintの導入</a></h1>
+<p>公式サイト: <a href="https://eslint.org/">ESLint</a></p>
+<p>ESLintは、JavaScriptの静的コード解析を行うためのツールです。</p>
+<p>ESLintは、JavaScriptのコードの品質に関わる次のような項目を検査できます。</p>
+<ul>
+<li>デッドコードの検知 (no-unused-vars, no-unreachable, etc.)</li>
+<li>コードの複雑さ (max-lines, max-depth, complexity, etc.)</li>
+</ul>
+<h2 id="導入方法"><a class="header" href="#導入方法">導入方法</a></h2>
+<p>プロジェクトにESLintを導入するには、ターミナルで以下のコマンドを実行します。</p>
+<pre><code class="language-bash">npm init @eslint/config
+</code></pre>
+<p>実行結果:</p>
+<pre><code class="language-console">$ npm init @eslint/config
+Need to install the following packages:
+  @eslint/create-config
+Ok to proceed? (y) &lt;Enterキーを入力&gt;
+...いくつか質問が続きます。それぞれ矢印キーとEnterキーを入力して回答してください。なお回答後に作られる設定ファイルを直接編集することで後から設定を変更することもできます。
+</code></pre>
+<table><thead><tr><th>質問</th><th>回答例</th></tr></thead><tbody>
+<tr><td>How would you like to use ESLint? (ESLintをどのように使いたいですか?)</td><td>To check syntax and find problems (シンタックス検査と問題点の検出)</td></tr>
+<tr><td>What type of modules does your project use? (プロジェクトでは、どのような種類のモジュールを使用していますか?)</td><td>JavaScript modules (import/export) (ECMAScript modules)</td></tr>
+<tr><td>Which framework does your project use? (プロジェクトでは、どのフレームワークを使用していますか?)</td><td>None of these (いずれもなし)</td></tr>
+<tr><td>Does your project use TypeScript? (あなたのプロジェクトではTypeScriptを使用していますか?)</td><td>No (いいえ)</td></tr>
+<tr><td>Where does your code run? (コードはどこで実行しますか?)</td><td>Node (Node.js)</td></tr>
+<tr><td>What format do you want your config file to be in? (設定ファイルの形式は?)</td><td>JavaScript</td></tr>
+<tr><td>Would you like to install them now? (今すぐインストールしますか?)</td><td>Yes (はい)</td></tr>
+<tr><td>Which package manager do you want to use? (どのパッケージマネージャを使用しますか?)</td><td>npm</td></tr>
+</tbody></table>
+<h2 id="実行方法"><a class="header" href="#実行方法">実行方法</a></h2>
+<p>導入したESLintは、<code>npx eslint</code> コマンドを使用することで実行できます。</p>
+<pre><code class="language-bash">npx eslint &lt;ファイル名またはディレクトリ名&gt;
+</code></pre>
+<p>たとえば、次のJavaScriptのファイルを作成し、ESLintによって検査してみましょう。</p>
+<pre><code class="language-js">// hello.js
+const message = &quot;Hello, World!&quot;;
+console.log(message);
+</code></pre>
+<pre><code class="language-console">$ npx eslint hello.js
+</code></pre>
+<p>実行後、何も表示されなければ検査完了です。
+検査に合格したことを意味します。</p>
+<p>実際にコードの品質に問題があった場合についても確認してみましょう。
+上のコードを次のように変更してみます。</p>
+<pre><code class="language-js">// hello.js
+const message = &quot;Hello, World!&quot;;
+console.log(invalid);
+</code></pre>
+<p><code>console.log()</code> の引数に定義されていない無効な値 <code>invalid</code> を渡してみます。</p>
+<pre><code class="language-console">$ npx eslint hello.js
+
+hello.js
+  1:7   error  'message' is assigned a value but never used  no-unused-vars
+  2:13  error  'invalid' is not defined                      no-undef
+
+✖ 2 problems (2 errors, 0 warnings)
+
+</code></pre>
+<p>実行するとエラーメッセージが表示されます。
+これは、ESLintがコードを検査した結果、2件の問題 (problems) を検知したことを意味します。</p>
+<p>このようにして、ESLintはコードの品質に関する問題を検知することができます。</p>
+<h2 id="エラーの説明"><a class="header" href="#エラーの説明">エラーの説明</a></h2>
+<pre><code>  1:7   error  'message' is assigned a value but never used  no-unused-vars
+</code></pre>
+<p>このメッセージは 対象のファイルの1行目、7列目に問題の可能性のあるコードが検出されたことを意味します。
+<code>no-unused-vars</code> ルールが有効になっている場合、このメッセージが表示されます。
+「'message' is assigned a value but never used (<code>message</code> に値が割り当てられているが、使われていません)」と書かれており、<code>message</code> がデッドコードとなっている可能性を知らせてくれています。</p>
+<p>もし仮にここでコードに必要な変数を宣言しているならば、その変数は必要な場所で正しく使用されていない可能性があります。
+あるいはもし仮に本当に不要な変数の宣言であるならば、この宣言は削除しても構いません。</p>
+<pre><code>  2:13  error  'invalid' is not defined                      no-undef
+</code></pre>
+<p>続いてのメッセージは、対象のファイルの2行目、13列目に問題の可能性のあるコードが検出されたことを意味します。
+<code>no-undef</code> ルールが有効になっている場合、このメッセージが表示されます。
+「'invalid' is not defined (<code>invalid</code> が定義されていない)」と書かれており、<code>invalid</code> が宣言されていない変数であることを知らせてくれています。
+JavaScriptで変数を使用する場合、あらかじめ宣言する必要があるので必要に応じて宣言するか、あるいはもし誤った変数を参照しているならば、正しい変数に変更しましょう。</p>
+<p>この他にもESLintにはさまざまなルールがあります。詳細は<a href="https://eslint.org/docs/rules/">ESLintのルール一覧</a>をご覧ください。</p>
+<h2 id="複数のファイルの検査"><a class="header" href="#複数のファイルの検査">複数のファイルの検査</a></h2>
+<p>引数にディレクトリを指定することで、そのディレクトリ内のコードを検査します。
+もしカレントディレクトリ内のコードを検査したい場合は、<code>.</code> を引数に指定します。</p>
+<pre><code class="language-bash">npx eslint .
+</code></pre>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="prettierの導入"><a class="header" href="#prettierの導入">Prettierの導入</a></h1>
+<p>公式サイト: <a href="https://prettier.io/">Prettier</a></p>
+<p>Prettierは、ソースコードを整形するためのツールです。</p>
+<p>Prettierは、JavaScriptをはじめとした、さまざまなコードの整形に対応しています。</p>
+<ul>
+<li>JavaScript</li>
+<li>JSX</li>
+<li>Angular</li>
+<li>Vue</li>
+<li>Flow</li>
+<li>TypeScript</li>
+<li>CSS, Less, and SCSS</li>
+<li>HTML</li>
+<li>Ember/Handlebars</li>
+<li>JSON</li>
+<li>GraphQL</li>
+<li>Markdown, including GFM and MDX</li>
+<li>YAML</li>
+</ul>
+<p>次のコマンドでPrettierをインストールします。</p>
+<pre><code>npm i -D prettier
+</code></pre>
+<p>インストール後、次のコマンドでファイルの整形を行います。</p>
+<pre><code class="language-bash">prettier --write &lt;ファイル名またはディレクトリ名&gt;
+</code></pre>
+<p>実行例:</p>
+<pre><code class="language-bash">prettier --write hello.js
+</code></pre>
+<p>もしカレントディレクトリ以下にある複数のファイルを整形したい場合は、<code>.</code> を引数に指定します。</p>
+<pre><code class="language-bash">prettier --write .
+</code></pre>
+<p>このようにして、Prettierはコードの整形を行うことができます。</p>
+<h2 id="eslintとの競合を避ける"><a class="header" href="#eslintとの競合を避ける">ESLintとの競合を避ける</a></h2>
+<p>ESLintでコードの整形を行うことがあり、その設定によってはPrettierで整形を行うことができない場合があります。
+それを避けるには、ESLintの設定として<a href="https://github.com/prettier/eslint-config-prettier#readme"><code>eslint-config-prettier</code></a>をインストールし、これを使用します。</p>
+<pre><code class="language-bash">npm i -D eslint-config-prettier
+</code></pre>
+<pre><code class="language-js">// .eslintrc.js
+module.exports = {
+  extends: [
+    &quot;eslint:recommended&quot;,
+    &quot;prettier&quot;, // extends の要素として追加
+  ],
+};
+</code></pre>
+<p>こうすることによって、Prettierで整形を行うことができない問題を回避することができます。必要に応じて行いましょう。</p>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="vscodeのインストール"><a class="header" href="#vscodeのインストール">VSCodeのインストール</a></h1>
+<p>VSCode (Visual Studio Code)は、ソースコードを編集するためのエディタです。</p>
+<p>VSCodeは、JavaScriptをはじめとするさまざまなプログラミング言語のシンタックスハイライトや自動補完、またデバッガなどの便利な機能を備えています。</p>
+<p>VSCodeは公式サイトからダウンロードしてインストールできます。</p>
+<p>公式サイト: <a href="https://code.visualstudio.com/">Visual Studio Code</a></p>
+<p>自分の環境に合わせたインストーラーをダウンロードし、それを実行します。
+インストーラーを実行するとVSCodeがインストールされます。</p>
+<h2 id="設定"><a class="header" href="#設定">設定</a></h2>
+<p>設定を変更するには、メニューから設定を開きます。</p>
+<ul>
+<li>Windows/Linuxの場合 - File (ファイル) &gt; User Settings (ユーザー設定) &gt; Settings (設定)</li>
+<li>macOSの場合 - Code &gt; User Settings (ユーザー設定) &gt; Settings (設定)</li>
+</ul>
+<h2 id="便利な設定"><a class="header" href="#便利な設定">便利な設定</a></h2>
+<ul>
+<li>Editor: Format On Save (保存時に自動整形) … <code>editor.formatOnSave</code>
+<ul>
+<li>有効化することで、ファイルを保存する時に自動的にコードの整形を行います。</li>
+</ul>
+</li>
+</ul>
+<h2 id="プロキシの設定"><a class="header" href="#プロキシの設定">プロキシの設定</a></h2>
+<p>プロキシが存在する環境では、拡張機能のインストールに失敗することがあります。
+拡張機能のインストールが行える環境の場合、設定不要です。必要に応じて適切なプロキシのURLを設定します。</p>
+<ul>
+<li>Http: Proxy … <code>http.proxy</code>
+<ul>
+<li>プロキシのURLを指定します。</li>
+</ul>
+</li>
+</ul>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="vscodeの拡張機能"><a class="header" href="#vscodeの拡張機能">VSCodeの拡張機能</a></h1>
+<p>VSCodeは、標準で備えている機能の他にMarketplaceにある拡張機能をインストールすることでさまざまな機能を追加することができます。</p>
+<h2 id="拡張機能の検索"><a class="header" href="#拡張機能の検索">拡張機能の検索</a></h2>
+<p>VSCodeを起動して、ウィンドウの左端のアクティビティバーにある「拡張機能」をクリックして、Marketplaceにある拡張機能を検索することができます。</p>
+<h2 id="便利な拡張機能の紹介"><a class="header" href="#便利な拡張機能の紹介">便利な拡張機能の紹介</a></h2>
+<ul>
+<li>ESLint (<a href="https://marketplace.visualstudio.com/items?itemName=dbaeumer.vscode-eslint"><code>dbaeumer.vscode-eslint</code></a>) … ESLintを使用するための拡張機能</li>
+<li>Prettier - Code formatter (<a href="https://marketplace.visualstudio.com/items?itemName=esbenp.prettier-vscode"><code>esbenp.prettier-vscode</code></a>) … Prettierを使用するための拡張機能</li>
+</ul>
+<p>検索した拡張機能を選択し、Install (インストール)をクリックしてその拡張機能をインストールします。</p>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="vscodeでのnodejsのデバッグ"><a class="header" href="#vscodeでのnodejsのデバッグ">VSCodeでのNode.jsのデバッグ</a></h1>
+<p>VSCodeは標準でNode.jsのプログラムのデバッグを行うことができます。</p>
+<p>VSCodeでNode.jsのプログラムのデバッグを行うには、Auto Attach (自動アタッチ)を使用します。
+設定を変更し、Node.jsで起動したプログラムにアタッチして、デバッグを開始します。</p>
+<p>デバッグを行えるようにすることで、ブレークポイントを指定して処理の流れを確認したり、そのときの変数の内容を確認したりすることができます。</p>
+<h2 id="自動アタッチ設定"><a class="header" href="#自動アタッチ設定">自動アタッチ設定</a></h2>
+<p>設定から、Debug › JavaScript: Auto Attach Filter (<code>debug.javascript.autoAttachFilter</code>) を変更します。</p>
+<p><code>smart</code> を選択すると、VSCodeターミナルからNode.jsのプロセスを実行したとき<a href="https://nodejs.org/ja/docs/guides/debugging-getting-started/"><code>--inspect</code></a>スイッチが有効化され、自動的にデバッグを開始することができます。</p>
+<p>自動アタッチを行うにはVSCode内のターミナルを使用しなければなりません。
+また、Auto Attachを有効にした後、ターミナルを一度再起動する必要があります。これは、ターミナルの右上にある ⚠ アイコンをクリックするか、新しいターミナルを作成することで行えます。</p>
+<h2 id="ブレークポイント"><a class="header" href="#ブレークポイント">ブレークポイント</a></h2>
+<p>Node.jsで実行するプログラムのコードをVSCodeで開き、行番号の左の部分をクリックしてブレークポイントを作成できます。
+また、もう一度その部分をクリックすることでそのブレークポイントを削除できます。</p>
+<p>ブレークポイントを作成すると、VSCode内のターミナルからNode.jsでそのプログラムを実行するとき、そのブレークポイントの行で処理は一時停止します。</p>
+<p>このようにして、VSCodeでNode.jsのプログラムのデバッグを行うことができます。</p>
 
                     </main>
 
