@@ -24,7 +24,10 @@ $ npm init @eslint/config
 Need to install the following packages:
   @eslint/create-config
 Ok to proceed? (y) <Enterキーを入力>
-...いくつか質問が続きます。それぞれ矢印キーとEnterキーを入力して回答してください。なお回答後に作られる設定ファイルを直接編集することで後から設定を変更することもできます。
+...
+いくつか質問が続きます。それぞれ矢印キーとEnterキーを入力して回答してください。
+なお回答後に作られる設定ファイルを直接編集することで設定を変更することもできます。
+...
 ```
 
 | 質問                                                                                                          | 回答例                                                             |
