@@ -70,13 +70,6 @@ npm ERR!     /home/webdino/.npm/_logs/2022-01-12T07_20_33_146Z-debug-0.log
 
 実際の自分の環境に合わせて変更してください。下記ではプロキシーのURLの例として `http://user:pass@proxy.example.com:8080` を使用しますが、実際には適切なURLを設定してください。
 
-### Windows - コマンドプロンプトの場合
-
-```
-set HTTP_PROXY=http://user:pass@proxy.example.com:8080
-set HTTPS_PROXY=http://user:pass@proxy.example.com:8080
-```
-
 ### Windows - PowerShellの場合
 
 ```powershell
@@ -84,7 +77,14 @@ $env:HTTP_PROXY="http://user:pass@proxy.example.com:8080"
 $env:HTTPS_PROXY="http://user:pass@proxy.example.com:8080"
 ```
 
-### それ以外 - BashやZshなどの場合
+### Windows - コマンドプロンプトの場合
+
+```
+set HTTP_PROXY=http://user:pass@proxy.example.com:8080
+set HTTPS_PROXY=http://user:pass@proxy.example.com:8080
+```
+
+### 上記以外 - BashやZshなどの場合
 
 ```bash
 export HTTP_PROXY=http://user:pass@proxy.example.com:8080
