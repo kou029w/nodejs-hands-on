@@ -184,15 +184,15 @@ npm ERR!     /home/webdino/.npm/_logs/2022-01-12T07_20_33_146Z-debug-0.log
 <p>このようなエラーが出ない場合は設定不要です。もしこのようなエラーが出る場合は、必要に応じて環境変数 <code>HTTP_PROXY</code> と <code>HTTPS_PROXY</code> に適切なプロキシのURLを設定します。</p>
 <h2 id="npmのプロキシの設定"><a class="header" href="#npmのプロキシの設定">NPMのプロキシの設定</a></h2>
 <p>実際の自分の環境に合わせて変更してください。下記ではプロキシーのURLの例として <code>http://user:pass@proxy.example.com:8080</code> を使用しますが、実際には適切なURLを設定してください。</p>
-<h3 id="windows---コマンドプロンプトの場合"><a class="header" href="#windows---コマンドプロンプトの場合">Windows - コマンドプロンプトの場合</a></h3>
-<pre><code>set HTTP_PROXY=http://user:pass@proxy.example.com:8080
-set HTTPS_PROXY=http://user:pass@proxy.example.com:8080
-</code></pre>
 <h3 id="windows---powershellの場合"><a class="header" href="#windows---powershellの場合">Windows - PowerShellの場合</a></h3>
 <pre><code class="language-powershell">$env:HTTP_PROXY=&quot;http://user:pass@proxy.example.com:8080&quot;
 $env:HTTPS_PROXY=&quot;http://user:pass@proxy.example.com:8080&quot;
 </code></pre>
-<h3 id="それ以外---bashやzshなどの場合"><a class="header" href="#それ以外---bashやzshなどの場合">それ以外 - BashやZshなどの場合</a></h3>
+<h3 id="windows---コマンドプロンプトの場合"><a class="header" href="#windows---コマンドプロンプトの場合">Windows - コマンドプロンプトの場合</a></h3>
+<pre><code>set HTTP_PROXY=http://user:pass@proxy.example.com:8080
+set HTTPS_PROXY=http://user:pass@proxy.example.com:8080
+</code></pre>
+<h3 id="上記以外---bashやzshなどの場合"><a class="header" href="#上記以外---bashやzshなどの場合">上記以外 - BashやZshなどの場合</a></h3>
 <pre><code class="language-bash">export HTTP_PROXY=http://user:pass@proxy.example.com:8080
 export HTTPS_PROXY=http://user:pass@proxy.example.com:8080
 </code></pre>
