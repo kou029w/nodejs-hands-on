@@ -1,5 +1,4 @@
 - [Node.jsを使う](README.md)
-- [Node.jsとは](about-nodejs.md)
 - [Node.jsのインストール](installing-nodejs.md)
 - [package.jsonファイル](package-json.md)
 - [ESLintの導入](eslint.md)
