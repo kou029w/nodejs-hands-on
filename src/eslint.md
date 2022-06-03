@@ -25,10 +25,9 @@ Need to install the following packages:
   @eslint/create-config
 Ok to proceed? (y) <Enterキーを入力>
 ...
-いくつか質問が続きます。それぞれ矢印キーとEnterキーを入力して回答してください。
-なお回答後に作られる設定ファイルを直接編集することで設定を変更することもできます。
-...
 ```
+
+いくつか質問が続きます。それぞれ矢印キーとEnterキーを入力して回答してください。
 
 | 質問                                                                                                          | 回答例                                                             |
 | ------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------ |
@@ -40,6 +39,8 @@ Ok to proceed? (y) <Enterキーを入力>
 | What format do you want your config file to be in? (設定ファイルの形式は?)                                    | JavaScript                                                         |
 | Would you like to install them now? (今すぐインストールしますか?)                                             | Yes (はい)                                                         |
 | Which package manager do you want to use? (どのパッケージマネージャを使用しますか?)                           | npm                                                                |
+
+なお、回答後に作られる設定ファイルを直接編集することで設定を変更することもできます。
 
 ## 実行方法
 
