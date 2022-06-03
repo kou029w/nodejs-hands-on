@@ -381,6 +381,8 @@ module.exports = {
 <p>VSCodeは、標準で備えている機能の他にMarketplaceにある拡張機能をインストールすることでさまざまな機能を追加することができます。</p>
 <h2 id="拡張機能の検索"><a class="header" href="#拡張機能の検索">拡張機能の検索</a></h2>
 <p>VSCodeを起動して、ウィンドウの左端のアクティビティバーにある「拡張機能」をクリックして、Marketplaceにある拡張機能を検索することができます。</p>
+<p><img src="assets/installing-eslint-vscode.png" alt="ESLintのインストール" /></p>
+<p><em>ESLintのインストール</em></p>
 <h2 id="便利な拡張機能の紹介"><a class="header" href="#便利な拡張機能の紹介">便利な拡張機能の紹介</a></h2>
 <ul>
 <li>ESLint (<a href="https://marketplace.visualstudio.com/items?itemName=dbaeumer.vscode-eslint"><code>dbaeumer.vscode-eslint</code></a>) … ESLintを使用するための拡張機能</li>
@@ -388,20 +390,76 @@ module.exports = {
 <li>Vue Language Features (Volar) (<a href="https://marketplace.visualstudio.com/items?itemName=Vue.volar"><code>Vue.volar</code></a>) … Vue.jsを使用するための拡張機能</li>
 </ul>
 <p>検索した拡張機能を選択し、Install (インストール)をクリックしてその拡張機能をインストールします。</p>
+<h2 id="eslintの使用"><a class="header" href="#eslintの使用">ESLintの使用</a></h2>
+<p><a href="eslint.html">ESLintの導入</a>のように、あらかじめESLintを導入したプロジェクトをVSCodeから開くと、そのプロジェクトのESLintが自動的に実行され、VSCodeの編集画面に表示されます。</p>
+<p><img src="assets/vscode-eslint-error.png" alt="ESLintの使用" /></p>
+<p><em>ESLintの使用</em></p>
+<p>このようにESLintの拡張機能をインストールすることによって自動的にESLintを実行し、即時にJavaScriptのコードのチェックを行うことができます。</p>
+<h2 id="prettierの使用"><a class="header" href="#prettierの使用">Prettierの使用</a></h2>
+<p><a href="prettier.html">Prettierの導入</a>で説明したとおり、PrettierはJavaScriptをはじめとしたさまざまなコードを整形するためのツールです。</p>
+<p>Prettierの拡張機能をインストールすることによって、VSCodeの編集画面に表示されるコードを自動的に整形することができます。
+Marketplaceに「Prettier - Code formatter」という名前で提供されています。これをインストールします。</p>
+<p><img src="assets/installing-prettier-vscode.png" alt="Prettier" /></p>
+<p><em>Prettier</em></p>
+<p>インストール後、ファイルを開き、<code>Ctrl</code>+<code>Shift</code>+<code>P</code> (macOSの場合は<code>Cmd</code>+<code>Shift</code>+<code>P</code>)を押して、コマンドパレットを開きます。そのなかに</p>
+<pre><code>&gt; format document
+</code></pre>
+<p>等のキーワードで「ドキュメントのフォーマット (Format Document)」を選択して、フォーマットを実行します。あるいは、<code>Ctrl</code>+<code>Shift</code>+<code>I</code> (macOSの場合は<code>Cmd</code>+<code>Shift</code>+<code>I</code>)を押しても、同様の操作が可能です。いずれかを実行してコードの整形を行います。</p>
+<p><img src="assets/vscode-format-document.png" alt="ドキュメントのフォーマット (Format Document)" /></p>
+<p>初回フォーマット時に、フォーマッタの選択肢が表示されることがあります。ここでフォーマッタとして、さきほどインストールした「Prettier - Code formatter (<code>esbenp.prettier-vscode</code>)」を選択します。</p>
+<p><img src="assets/vscode-formatter-settings.png" alt="フォーマッタの選択" /></p>
+<p>こうすることによって規定のフォーマッタとしてPrettierが設定されます。それでは実際にPrettierによるコードの整形を試していきましょう。</p>
+<p>例として、空白と改行がぐちゃくちゃに挿入されたJavaScriptのコードを示します。</p>
+<p><img src="assets/prettier-before.png" alt="コード整形前" /></p>
+<p>このコードに対して「ドキュメントのフォーマット」実行すると、次のように整形されます。</p>
+<p><img src="assets/prettier-after.png" alt="コード整形後" /></p>
+<p>さらに<a href="installing-vscode.html#%E4%BE%BF%E5%88%A9%E3%81%AA%E8%A8%AD%E5%AE%9A">VSCodeの便利な設定</a>のなかで紹介した「Format On Save」を有効にすることで自動整形を行うことができます。</p>
+<p>このようにして、Prettierによって簡単にコードを整形できます。</p>
+<h2 id="vue-language-features-volarの使用"><a class="header" href="#vue-language-features-volarの使用">Vue Language Features (Volar)の使用</a></h2>
+<p>VolarはVueの公式のVSCode拡張機能です。</p>
+<p><img src="assets/installing-volar-vscode.png" alt="Volar" /></p>
+<p><em>Volar</em></p>
+<p>こちらも必要に応じて使いましょう。</p>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="vscodeでのnodejsのデバッグ"><a class="header" href="#vscodeでのnodejsのデバッグ">VSCodeでのNode.jsのデバッグ</a></h1>
 <p>VSCodeは標準でNode.jsのプログラムのデバッグを行うことができます。</p>
 <p>VSCodeでNode.jsのプログラムのデバッグを行うには、Auto Attach (自動アタッチ)を使用します。
 設定を変更し、Node.jsで起動したプログラムにアタッチして、デバッグを開始します。</p>
 <p>デバッグを行えるようにすることで、ブレークポイントを指定して処理の流れを確認したり、そのときの変数の内容を確認したりすることができます。</p>
 <h2 id="自動アタッチ設定"><a class="header" href="#自動アタッチ設定">自動アタッチ設定</a></h2>
-<p>設定から、Debug › JavaScript: Auto Attach Filter (<code>debug.javascript.autoAttachFilter</code>) を変更します。</p>
-<p><code>smart</code> を選択すると、VSCodeターミナルからNode.jsのプロセスを実行したとき<a href="https://nodejs.org/ja/docs/guides/debugging-getting-started/"><code>--inspect</code></a>スイッチが有効化され、自動的にデバッグを開始することができます。</p>
+<p>設定から、Debug › JavaScript: Auto Attach Filter (<code>debug.javascript.autoAttachFilter</code>) を変更します (1)。</p>
+<p><code>smart</code> を選択すると、VSCodeターミナルからNode.jsのプロセスを実行したとき<a href="https://nodejs.org/ja/docs/guides/debugging-getting-started/"><code>--inspect</code></a>スイッチが有効化され、自動的にデバッグを開始することができます (2)。</p>
 <p>自動アタッチを行うにはVSCode内のターミナルを使用しなければなりません。
-また、Auto Attachを有効にした後、ターミナルを一度再起動する必要があります。これは、ターミナルの右上にある ⚠ アイコンをクリックするか、新しいターミナルを作成することで行えます。</p>
+また、Auto Attachを有効にした後、ターミナルを一度再起動する必要があります。これは、ターミナルの右上にある ⚠ アイコンをクリックするか、新しいターミナルを作成することで行えます (3)。</p>
+<p><img src="assets/nodejs-auto-attach.dio.png" alt="自動アタッチ設定" /></p>
+<p><em>自動アタッチ設定</em></p>
 <h2 id="ブレークポイント"><a class="header" href="#ブレークポイント">ブレークポイント</a></h2>
 <p>Node.jsで実行するプログラムのコードをVSCodeで開き、行番号の左の部分をクリックしてブレークポイントを作成できます。
 また、もう一度その部分をクリックすることでそのブレークポイントを削除できます。</p>
-<p>ブレークポイントを作成すると、VSCode内のターミナルからNode.jsでそのプログラムを実行するとき、そのブレークポイントの行で処理は一時停止します。</p>
+<p><img src="assets/nodejs-breakpoint.png" alt="ブレークポイントの作成" /></p>
+<p><em>ブレークポイントの作成</em></p>
+<p>あるいは、画面上からクリックする代わりに、コードのブレークポイントを置きたい場所に <code>debugger</code> 文を追加することでブレークポイントを作成します。いずれの方法でもブレークポイントを作成できます。</p>
+<p>参考文献: <a href="https://developer.mozilla.org/ja/docs/Web/JavaScript/Reference/Statements/debugger">debugger - JavaScript | MDN</a></p>
+<p>ブレークポイントを作成後、VSCode内のターミナルから実行するとそのブレークポイントでNode.jsの処理は一時停止します。</p>
+<p>ターミナル:</p>
+<pre><code class="language-console">$ node hello.js
+</code></pre>
+<p><img src="assets/nodejs-debugger.png" alt="Node.jsのデバッグ" /></p>
+<p><em>Node.jsのデバッグ</em></p>
+<p>上部に表示されているボタンの意味を説明します。</p>
+<h3 id="続行"><a class="header" href="#続行">続行</a></h3>
+<p><img src="https://github.com/microsoft/vscode/raw/1.67.2/src/vs/workbench/contrib/debug/browser/media/continue-tb.png" alt="続行" /><!-- @license https://github.com/microsoft/vscode/raw/1.67.2/LICENSE.txt --></p>
+<p>プログラムの実行を続けます。プログラムが終了するか次にブレークポイントが現れるまで実行し続けます。</p>
+<h3 id="ステップオーバー"><a class="header" href="#ステップオーバー">ステップオーバー</a></h3>
+<p><img src="https://github.com/microsoft/vscode/raw/1.67.2/src/vs/workbench/contrib/debug/browser/media/stepover-tb.png" alt="ステップオーバー" /><!-- @license https://github.com/microsoft/vscode/raw/1.67.2/LICENSE.txt --></p>
+<p>ステップオーバー、ステップイン、ステップアウトはステップ実行のための機能です。</p>
+<p>ステップオーバーは、プログラムを1行進めます。</p>
+<h3 id="ステップイン"><a class="header" href="#ステップイン">ステップイン</a></h3>
+<p><img src="https://github.com/microsoft/vscode/raw/1.67.2/src/vs/workbench/contrib/debug/browser/media/stepinto-tb.png" alt="ステップイン" /><!-- @license https://github.com/microsoft/vscode/raw/1.67.2/LICENSE.txt --></p>
+<p>ステップインは、もしその行に関数の呼び出しがあれば、その関数の最初の行に移動します。</p>
+<h3 id="ステップアウト"><a class="header" href="#ステップアウト">ステップアウト</a></h3>
+<p><img src="https://github.com/microsoft/vscode/raw/1.67.2/src/vs/workbench/contrib/debug/browser/media/stepout-tb.png" alt="ステップアウト" /><!-- @license https://github.com/microsoft/vscode/raw/1.67.2/LICENSE.txt --></p>
+<p>ステップアウトは、もしその行が関数の中であれば、その関数の呼び出し元の次の行に移動します。</p>
+<p>参考文献: <a href="https://code.visualstudio.com/docs/editor/debugging">Debugging in Visual Studio Code</a></p>
 <p>このようにして、VSCodeでNode.jsのプログラムのデバッグを行うことができます。</p>
 
                     </main>
