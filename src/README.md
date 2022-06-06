@@ -2,7 +2,7 @@
 
 この文書はNode.jsを使うための入門ガイドです。Node.jsを使って開発を進めていくための最初の一歩になればと思います。
 
-## Node.jsとは
+## ヒント: Node.jsとは
 
 公式サイト: [Node.js](https://nodejs.org/ja/)
 
