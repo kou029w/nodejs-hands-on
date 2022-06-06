@@ -20,6 +20,8 @@ _ESLintのインストール_
 
 ## ESLintの使用
 
+「eslint」で検索し、インストールします。
+
 [ESLintの導入](eslint.md)のように、あらかじめESLintを導入したプロジェクトをVSCodeから開くと、そのプロジェクトのESLintが自動的に実行され、VSCodeの編集画面に表示されます。
 
 ![ESLintの使用](assets/vscode-eslint-error.png)
