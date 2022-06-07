@@ -55,9 +55,9 @@ _Prettier_
 
 ![フォーマッタの選択](assets/vscode-formatter-settings.png)
 
-こうすることによって規定のフォーマッタとしてPrettierが設定されます。それでは実際にPrettierによるコードの整形を試していきましょう。
+こうすることによって規定のフォーマッタとしてPrettierが設定されます。
 
-例として、空白と改行がぐちゃくちゃに挿入されたJavaScriptのコードを示します。
+それでは実際にPrettierによるコードの整形を試していきましょう。例として、空白と改行がぐちゃくちゃに挿入されたJavaScriptのコードを示します。
 
 ![コード整形前](assets/prettier-before.png)
 
