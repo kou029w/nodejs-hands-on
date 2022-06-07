@@ -71,10 +71,14 @@ _Prettier_
 
 ## Vue Language Features (Volar)の使用
 
-VolarはVueの公式のVSCode拡張機能です。
+VolarはVueでの開発に必要な拡張機能です。
 
 ![Volar](assets/installing-volar-vscode.png)
 
 _Volar_
 
-こちらも必要に応じて使いましょう。
+Vueとはユーザーインターフェイスを構築するためのJavaScriptフレームワークです。
+
+Vue公式サイト: [Vue.js](https://v3.ja.vuejs.org/)
+
+この拡張機能を使用するとVSCodeでVueのコードの強調表示や補完などを行えます。必要に応じてインストールしましょう。
