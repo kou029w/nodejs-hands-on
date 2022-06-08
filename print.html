@@ -184,9 +184,9 @@ npm ERR! network 'proxy' config is set properly.  See: 'npm help config'
 npm ERR! A complete log of this run can be found in:
 npm ERR!     /home/webdino/.npm/_logs/2022-01-12T07_20_33_146Z-debug-0.log
 </code></pre>
-<p>このようなエラーが出る場合は、必要に応じて環境変数 <code>HTTP_PROXY</code> と <code>HTTPS_PROXY</code> に適切なプロキシのURLを設定します。もしこのようなエラーが出ない場合は下記の設定は不要です。</p>
+<p>プロキシが存在する環境下でこのようなエラーが出る場合はNPMのプロキシの設定をします。もしこのようなエラーが出ない場合は下記の設定は不要です。</p>
 <h2 id="npmのプロキシの設定"><a class="header" href="#npmのプロキシの設定">NPMのプロキシの設定</a></h2>
-<p>環境変数を作成してNPMのプロキシを設定します。下記ではプロキシーのURLの例として <code>http://user:pass@proxy.example.com:8080</code> を使用しますが、実際の自分の環境に合わせて適切なURLを設定しましょう。</p>
+<p>環境変数 <code>HTTP_PROXY</code> と <code>HTTPS_PROXY</code> を作成してNPMのプロキシを設定します。下記ではプロキシーのURLの例として <code>http://user:pass@proxy.example.com:8080</code> を使用しますが、実際の自分の環境に合わせて適切なURLを設定しましょう。</p>
 <h3 id="windows---powershellの場合"><a class="header" href="#windows---powershellの場合">Windows - PowerShellの場合</a></h3>
 <pre><code class="language-powershell">$env:HTTP_PROXY=&quot;http://user:pass@proxy.example.com:8080&quot;
 $env:HTTPS_PROXY=&quot;http://user:pass@proxy.example.com:8080&quot;
