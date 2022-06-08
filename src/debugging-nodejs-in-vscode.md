@@ -16,16 +16,16 @@ VSCodeでNode.jsのプログラムのデバッグを行うには、Auto Attach (
 自動アタッチを行うにはVSCode内のターミナルを使用しなければなりません。
 また、Auto Attachを有効にした後、ターミナルを一度再起動する必要があります。これは、ターミナルの右上にある ⚠ アイコンをクリックするか、新しいターミナルを作成することで行えます (3)。
 
-![自動アタッチ設定](assets/nodejs-auto-attach.dio.png)
+![](assets/nodejs-auto-attach.dio.png)
 
-_自動アタッチ設定_
+_自動アタッチの設定_
 
 ## ブレークポイント
 
 Node.jsで実行するプログラムのコードをVSCodeで開き、行番号の左の部分をクリックしてブレークポイントを作成できます。
 また、もう一度その部分をクリックすることでそのブレークポイントを削除できます。
 
-![ブレークポイントの作成](assets/nodejs-breakpoint.png)
+![](assets/nodejs-breakpoint.png)
 
 _ブレークポイントの作成_
 
@@ -41,7 +41,7 @@ _ブレークポイントの作成_
 $ node hello.js
 ```
 
-![Node.jsのデバッグ](assets/nodejs-debugger.png)
+![](assets/nodejs-debugger.png)
 
 _Node.jsのデバッグ_
 

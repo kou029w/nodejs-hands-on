@@ -6,9 +6,9 @@ VSCodeは、標準で備えている機能の他にMarketplaceにある拡張機
 
 VSCodeを起動して、ウィンドウの左端のアクティビティバーにある「拡張機能」をクリックして、Marketplaceにある拡張機能を検索することができます。
 
-![ESLintのインストール](assets/installing-eslint-vscode.png)
+![](assets/installing-eslint-vscode.png)
 
-_ESLintのインストール_
+_ESLintの拡張機能のインストール_
 
 ## 便利な拡張機能の紹介
 
@@ -26,7 +26,7 @@ _ESLintのインストール_
 
 ![ESLintの使用](assets/vscode-eslint-error.png)
 
-_ESLintの使用_
+_ESLintの拡張機能の使用_
 
 このようにESLintの拡張機能をインストールすることによって自動的にESLintを実行し、即時にJavaScriptのコードのチェックを行うことができます。
 
@@ -37,9 +37,9 @@ _ESLintの使用_
 Prettierの拡張機能をインストールすることによって、VSCodeの編集画面に表示されるコードを自動的に整形することができます。
 Marketplaceに「Prettier - Code formatter」という名前で提供されています。これをインストールします。
 
-![Prettier](assets/installing-prettier-vscode.png)
+![](assets/installing-prettier-vscode.png)
 
-_Prettier_
+_Prettierの拡張機能のインストール_
 
 インストール後、ファイルを開き、`Ctrl`+`Shift`+`P` (macOSの場合は`Cmd`+`Shift`+`P`)を押して、コマンドパレットを開きます。そのなかに
 
@@ -73,9 +73,9 @@ _Prettier_
 
 VolarはVueでの開発に必要な拡張機能です。
 
-![Volar](assets/installing-volar-vscode.png)
+![](assets/installing-volar-vscode.png)
 
-_Volar_
+_Volarのインストール_
 
 Vueとはユーザーインターフェイスを構築するためのJavaScriptフレームワークです。
 
