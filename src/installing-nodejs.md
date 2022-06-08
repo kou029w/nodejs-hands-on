@@ -68,7 +68,7 @@ npm ERR!     /home/webdino/.npm/_logs/2022-01-12T07_20_33_146Z-debug-0.log
 
 ## NPMのプロキシの設定
 
-実際の自分の環境に合わせて変更してください。下記ではプロキシーのURLの例として `http://user:pass@proxy.example.com:8080` を使用しますが、実際には適切なURLを設定してください。
+環境変数を作成してNPMのプロキシを設定します。下記ではプロキシーのURLの例として `http://user:pass@proxy.example.com:8080` を使用しますが、実際の自分の環境に合わせて適切なURLを設定しましょう。
 
 ### Windows - PowerShellの場合
 
