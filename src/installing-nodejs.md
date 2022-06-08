@@ -64,7 +64,7 @@ npm ERR! A complete log of this run can be found in:
 npm ERR!     /home/webdino/.npm/_logs/2022-01-12T07_20_33_146Z-debug-0.log
 ```
 
-このようなエラーが出ない場合は設定不要です。もしこのようなエラーが出る場合は、必要に応じて環境変数 `HTTP_PROXY` と `HTTPS_PROXY` に適切なプロキシのURLを設定します。
+このようなエラーが出る場合は、必要に応じて環境変数 `HTTP_PROXY` と `HTTPS_PROXY` に適切なプロキシのURLを設定します。もしこのようなエラーが出ない場合は下記の設定は不要です。
 
 ## NPMのプロキシの設定
 
