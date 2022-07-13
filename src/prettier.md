@@ -29,19 +29,19 @@ npm i -D prettier
 インストール後、次のコマンドでファイルの整形を行います。
 
 ```bash
-prettier --write <ファイル名またはディレクトリ名>
+npx prettier --write <ファイル名またはディレクトリ名>
 ```
 
 実行例:
 
 ```bash
-prettier --write hello.js
+npx prettier --write hello.js
 ```
 
 もしカレントディレクトリ以下にある複数のファイルを整形したい場合は、`.` を引数に指定します。
 
 ```bash
-prettier --write .
+npx prettier --write .
 ```
 
 このようにして、Prettierはコードの整形を行うことができます。
