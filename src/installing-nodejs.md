@@ -41,7 +41,7 @@ node -v
 
 ```console
 $ node -v
-v16.15.0
+v16.16.0
 ```
 
 ## NPMとプロキシの確認
