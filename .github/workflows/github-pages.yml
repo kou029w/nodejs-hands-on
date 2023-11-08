@@ -10,7 +10,7 @@ jobs:
     environment: github-pages
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v3
+      - uses: actions/checkout@v4
       - uses: Homebrew/actions/setup-homebrew@master
       - id: brew_cache
         run: echo "::set-output name=dir::$(brew --cache)"
@@ -22,7 +22,7 @@ jobs:
         run: |
           brew bundle
           mdbook build
-      - uses: actions/upload-pages-artifact@v1
+      - uses: actions/upload-pages-artifact@v2
         with:
           path: book
       - uses: actions/deploy-pages@v2
