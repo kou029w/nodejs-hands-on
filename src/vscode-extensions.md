@@ -65,7 +65,7 @@ _Prettierの拡張機能のインストール_
 
 ![コード整形後](assets/prettier-after.png)
 
-さらに[VSCodeの便利な設定](installing-vscode.html#%E4%BE%BF%E5%88%A9%E3%81%AA%E8%A8%AD%E5%AE%9A)のなかで紹介した「Format On Save」を有効にすることで自動整形を行うことができます。
+さらに[VSCodeの便利な設定](installing-vscode.md#%E4%BE%BF%E5%88%A9%E3%81%AA%E8%A8%AD%E5%AE%9A)のなかで紹介した「Format On Save」を有効にすることで自動整形を行うことができます。
 
 このようにして、Prettierによって簡単にコードを整形できます。
 

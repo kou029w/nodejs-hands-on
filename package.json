@@ -5,9 +5,12 @@
   "author": "Kohei Watanabe <kou029w@gmail.com>",
   "license": "CC0-1.0",
   "scripts": {
+    "prepare": "git config core.hooksPath .githooks",
+    "test": "find src -name '*.md' -exec markdown-link-check {} +",
     "format": "prettier --write ."
   },
   "devDependencies": {
+    "markdown-link-check": "^3.11.2",
     "prettier": "^3.0.0"
   }
 }
