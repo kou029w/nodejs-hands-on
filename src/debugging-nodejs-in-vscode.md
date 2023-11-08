@@ -49,13 +49,13 @@ _Node.jsのデバッグ_
 
 ### 続行
 
-![続行](https://github.com/microsoft/vscode/raw/1.67.2/src/vs/workbench/contrib/debug/browser/media/continue-tb.png)<!-- @license https://github.com/microsoft/vscode/raw/1.67.2/LICENSE.txt -->
+![続行](https://github.com/microsoft/vscode/raw/1.84.1/src/vs/workbench/contrib/debug/browser/media/continue-tb.png)<!-- @license https://github.com/microsoft/vscode/raw/1.84.1/LICENSE.txt -->
 
 プログラムの実行を続けます。プログラムが終了するか次にブレークポイントが現れるまで実行し続けます。
 
 ### ステップオーバー
 
-![ステップオーバー](https://github.com/microsoft/vscode/raw/1.67.2/src/vs/workbench/contrib/debug/browser/media/stepover-tb.png)<!-- @license https://github.com/microsoft/vscode/raw/1.67.2/LICENSE.txt -->
+![ステップオーバー](https://github.com/microsoft/vscode/raw/1.84.1/src/vs/workbench/contrib/debug/browser/media/stepover-tb.png)<!-- @license https://github.com/microsoft/vscode/raw/1.84.1/LICENSE.txt -->
 
 ステップオーバー、ステップイン、ステップアウトはステップ実行のための機能です。
 
@@ -63,13 +63,13 @@ _Node.jsのデバッグ_
 
 ### ステップイン
 
-![ステップイン](https://github.com/microsoft/vscode/raw/1.67.2/src/vs/workbench/contrib/debug/browser/media/stepinto-tb.png)<!-- @license https://github.com/microsoft/vscode/raw/1.67.2/LICENSE.txt -->
+![ステップイン](https://github.com/microsoft/vscode/raw/1.84.1/src/vs/workbench/contrib/debug/browser/media/stepinto-tb.png)<!-- @license https://github.com/microsoft/vscode/raw/1.84.1/LICENSE.txt -->
 
 ステップインは、もしその行に関数の呼び出しがあれば、その関数の最初の行に移動します。
 
 ### ステップアウト
 
-![ステップアウト](https://github.com/microsoft/vscode/raw/1.67.2/src/vs/workbench/contrib/debug/browser/media/stepout-tb.png)<!-- @license https://github.com/microsoft/vscode/raw/1.67.2/LICENSE.txt -->
+![ステップアウト](https://github.com/microsoft/vscode/raw/1.84.1/src/vs/workbench/contrib/debug/browser/media/stepout-tb.png)<!-- @license https://github.com/microsoft/vscode/raw/1.84.1/LICENSE.txt -->
 
 ステップアウトは、もしその行が関数の中であれば、その関数の呼び出し元の次の行に移動します。
 
