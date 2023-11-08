@@ -11,7 +11,7 @@ VSCodeでNode.jsのプログラムのデバッグを行うには、Auto Attach (
 
 設定から、Debug › JavaScript: Auto Attach Filter (`debug.javascript.autoAttachFilter`) を変更します (1)。
 
-`smart` を選択すると、VSCodeターミナルからNode.jsのプロセスを実行したとき[`--inspect`](https://nodejs.org/ja/docs/guides/debugging-getting-started/)スイッチが有効化され、自動的にデバッグを開始することができます (2)。
+`smart` を選択すると、VSCodeターミナルからNode.jsのプロセスを実行したとき[`--inspect`](https://nodejs.org/en/docs/guides/debugging-getting-started)スイッチが有効化され、自動的にデバッグを開始することができます (2)。
 
 自動アタッチを行うにはVSCode内のターミナルを使用しなければなりません。
 また、Auto Attachを有効にした後、ターミナルを一度再起動する必要があります。これは、ターミナルの右上にある ⚠ アイコンをクリックするか、新しいターミナルを作成することで行えます (3)。
