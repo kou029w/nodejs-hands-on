@@ -1,0 +1,11 @@
+{
+  "name": "scope",
+  "version": "1.0.0",
+  "private": true,
+  "main": "main.js",
+  "type": "module",
+  "scripts": {
+    "test": "node --test",
+    "watch": "node --test --watch"
+  }
+}

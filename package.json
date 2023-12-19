@@ -4,9 +4,13 @@
   "private": true,
   "author": "Kohei Watanabe <kou029w@gmail.com>",
   "license": "CC0-1.0",
+  "type": "module",
+  "workspaces": [
+    "templates/*"
+  ],
   "scripts": {
     "prepare": "git config core.hooksPath .githooks",
-    "test": "find src -name '*.md' -exec markdown-link-check {} +",
+    "test": "find src -name '*.md' -exec markdown-link-check {} + && node --test src && npm test --workspaces",
     "format": "prettier --write ."
   },
   "devDependencies": {
