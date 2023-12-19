@@ -13,5 +13,5 @@ StackBlitzではじめる場合は、以降の準備は不要です。
 ## ローカル環境ではじめる
 
 ローカル環境にNode.jsの実行環境を構築する場合、まずはじめにNode.jsをインストールします。
-インストール方法は[Node\.jsのインストール \- Node\.jsを使う](../installing-nodejs.md)をご参照ください。
-プロジェクトの作成方法は[package.jsonファイル - Node.jsを使う](../package-json.md)をご参照ください。
+インストール方法は「[Node.jsのインストール](../installing-nodejs.md)」をご参照ください。
+プロジェクトの作成方法は「[package.jsonファイル](../package-json.md)」をご参照ください。
