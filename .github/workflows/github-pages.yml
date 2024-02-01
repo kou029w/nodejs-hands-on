@@ -14,7 +14,7 @@ jobs:
       - uses: Homebrew/actions/setup-homebrew@master
       - id: brew_cache
         run: echo "::set-output name=dir::$(brew --cache)"
-      - uses: actions/cache@v3
+      - uses: actions/cache@v4
         with:
           path: ${{ steps.brew_cache.outputs.dir }}
           key: brew-v3
