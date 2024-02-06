@@ -1,9 +1,10 @@
 [book]
+authors = ["Kohei Watanabe"]
 language = "ja"
 title = "Node.jsを使う"
-authors = ["Kohei Watanabe"]
 
 [output.html]
-site-url = "/nodejs-hands-on/"
-git-repository-url = "https://github.com/kou029w/nodejs-hands-on"
+additional-js = ["external-links.js", "regexp-search.js"]
 edit-url-template = "https://github.com/kou029w/nodejs-hands-on/edit/main/{path}"
+git-repository-url = "https://github.com/kou029w/nodejs-hands-on"
+site-url = "/nodejs-hands-on/"
