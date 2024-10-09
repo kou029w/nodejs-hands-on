@@ -9,18 +9,12 @@ jobs:
       id-token: write
     environment: github-pages
     runs-on: ubuntu-latest
+    container: alpine
     steps:
       - uses: actions/checkout@v4
-      - uses: Homebrew/actions/setup-homebrew@master
-      - id: brew_cache
-        run: echo "::set-output name=dir::$(brew --cache)"
-      - uses: actions/cache@v4
-        with:
-          path: ${{ steps.brew_cache.outputs.dir }}
-          key: brew-v3
       - name: Build
         run: |
-          brew bundle
+          apk add mdbook tar
           mdbook build
       - uses: actions/upload-pages-artifact@v3
         with:
