@@ -56,13 +56,11 @@ npm i -D eslint-config-prettier
 ```
 
 ```js
-// .eslintrc.js
-module.exports = {
-  extends: [
-    "eslint:recommended",
-    "prettier", // extends の要素として追加
-  ],
-};
+// eslint.config.js
+import js from "@eslint/js";
+import prettier from "eslint-config-prettier";
+
+export default [js.configs.recommended, prettier];
 ```
 
 こうすることによって、Prettierで整形を行うことができない問題を回避することができます。必要に応じて行いましょう。

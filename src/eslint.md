@@ -36,7 +36,6 @@ Ok to proceed? (y) <Enterキーを入力>
 | Which framework does your project use? (プロジェクトでは、どのフレームワークを使用していますか?)              | None of these (いずれもなし)                                       |
 | Does your project use TypeScript? (あなたのプロジェクトではTypeScriptを使用していますか?)                     | No (いいえ)                                                        |
 | Where does your code run? (コードはどこで実行しますか?)                                                       | Node (Node.js)                                                     |
-| What format do you want your config file to be in? (設定ファイルの形式は?)                                    | JavaScript                                                         |
 | Would you like to install them now? (今すぐインストールしますか?)                                             | Yes (はい)                                                         |
 | Which package manager do you want to use? (どのパッケージマネージャを使用しますか?)                           | npm                                                                |
 
