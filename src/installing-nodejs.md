@@ -41,5 +41,5 @@ node -v
 
 ```console
 $ node -v
-v22.9.0
+v22.11.0
 ```
