@@ -73,7 +73,7 @@ _Prettierの拡張機能のインストール_
 
 "Vue - Official"はVueでの開発に必要な拡張機能です。
 
-![](assets/installing-volar-vscode.png)
+![](assets/installing-vue-official-vscode.png)
 
 _"Vue - Official"のインストール_
 
