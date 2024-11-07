@@ -14,7 +14,7 @@ _ESLintの拡張機能のインストール_
 
 - ESLint ([`dbaeumer.vscode-eslint`](https://marketplace.visualstudio.com/items?itemName=dbaeumer.vscode-eslint)) … ESLintを使用するための拡張機能
 - Prettier - Code formatter ([`esbenp.prettier-vscode`](https://marketplace.visualstudio.com/items?itemName=esbenp.prettier-vscode)) … Prettierを使用するための拡張機能
-- Vue Language Features (Volar) ([`Vue.volar`](https://marketplace.visualstudio.com/items?itemName=Vue.volar)) … Vue.jsを使用するための拡張機能
+- Vue - Official ([`Vue.volar`](https://marketplace.visualstudio.com/items?itemName=Vue.volar)) … Vue.jsを使用するための拡張機能
 
 検索した拡張機能を選択し、Install (インストール)をクリックしてその拡張機能をインストールします。
 
@@ -69,13 +69,13 @@ _Prettierの拡張機能のインストール_
 
 このようにして、Prettierによって簡単にコードを整形できます。
 
-## Vue Language Features (Volar)の使用
+## Vue - Official の使用
 
-VolarはVueでの開発に必要な拡張機能です。
+"Vue - Official"はVueでの開発に必要な拡張機能です。
 
 ![](assets/installing-volar-vscode.png)
 
-_Volarのインストール_
+_"Vue - Official"のインストール_
 
 Vueとはユーザーインターフェイスを構築するためのJavaScriptフレームワークです。
 
