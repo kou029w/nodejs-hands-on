@@ -9,7 +9,6 @@
     "templates/*"
   ],
   "scripts": {
-    "prepare": "git config core.hooksPath .githooks",
     "test": "find src -name '*.md' -exec markdown-link-check {} + && node --test 'src/**/*.test.js' && npm test --workspaces",
     "format": "prettier --write ."
   },
