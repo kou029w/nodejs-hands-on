@@ -1,1 +1,1 @@
-// mock.test.js をご参照ください
+// mock.test.js をご覧ください

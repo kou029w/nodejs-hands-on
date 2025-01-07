@@ -1,1 +1,1 @@
-// promise.test.js をご参照ください
+// promise.test.js をご覧ください

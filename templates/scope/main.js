@@ -1,1 +1,1 @@
-// scope.test.js をご参照ください
+// scope.test.js をご覧ください

@@ -1,1 +1,1 @@
-// https://kou029w.github.io/nodejs-hands-on/test/ をご参照ください
+// https://kou029w.github.io/nodejs-hands-on/test/ をご覧ください
