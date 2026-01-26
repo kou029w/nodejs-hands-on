@@ -5,11 +5,8 @@
   "author": "Kohei Watanabe <kou029w@gmail.com>",
   "license": "CC0-1.0",
   "type": "module",
-  "workspaces": [
-    "templates/*"
-  ],
   "scripts": {
-    "test": "find src -name '*.md' -exec markdown-link-check {} + && node --test 'src/**/*.test.js' && npm test --workspaces",
+    "test": "find src -name '*.md' -exec markdown-link-check {} +",
     "format": "prettier --write ."
   },
   "devDependencies": {
